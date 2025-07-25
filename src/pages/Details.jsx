@@ -104,6 +104,10 @@ function Details() {
                 <p className="text-base font-medium ">PR: ${product?.price}</p>
               </div>
 
+              <div className="mt-2">
+                <p className="text-base font-medium ">{product?.category}</p>
+              </div>
+
               <p className="text-base font-medium mt-2 ">About Product</p>
               {product?.description?.includes(",") ? (
                 <ul className="list-disc ml-4 text-gray-500/70">

@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
-import { ShoppingBag } from "lucide-react";
+import { Heart, ShoppingBag } from "lucide-react";
 import { Eye } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useCartStore } from "../store/useCartStore";
+import { useWishListStore } from "../store/useWishListStore";
 function Product({ product, Highlight }) {
   const { addCart } = useCartStore();
+  const { addWishList, wishList } = useWishListStore();
   const { title, image, id } = product;
   const navigate = useNavigate();
 
@@ -44,6 +46,21 @@ function Product({ product, Highlight }) {
           className="absolute flex items-center justify-center size-[35px] group-hover:left-[2%] transition-all duration-300 top-[20%] left-[-30%] rounded-md shadow z-[55] text-base-200 bg-base-200 cursor-pointer  "
         >
           <Eye className="text-green-700 " />
+        </button>
+
+        <button
+          onClick={() => {
+            addWishList(product);
+          }}
+          className={`absolute flex items-center justify-center size-[35px] group-hover:left-[2%] transition-all duration-300 top-[40%] left-[-30%] rounded-md shadow z-[55] text-base-200 bg-base-200 cursor-pointer`}
+        >
+          <Heart
+            className={`  ${
+              wishList?.find((i) => i.id == product.id)
+                ? "text-red-600"
+                : " text-green-700"
+            }  `}
+          />
         </button>
         <div className="h-[290px]  overflow-hidden">
           <img

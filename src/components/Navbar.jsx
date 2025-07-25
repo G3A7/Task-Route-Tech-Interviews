@@ -1,10 +1,14 @@
 import { ShoppingBag } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import ThemeSelector from "./ThemeSelector";
+import { Heart } from "lucide-react";
+import { HeartCrack } from "lucide-react";
 import { Trash2 } from "lucide-react";
 import { useCartStore } from "../store/useCartStore";
+import { useWishListStore } from "../store/useWishListStore";
 function Navbar() {
   const { cart, removeCart } = useCartStore();
+  const { wishList, clearWishList, removeWishList } = useWishListStore();
   const navigate = useNavigate();
   return (
     <div className="shadow border-base-300 border-b bg-base-100 text-base-content   sticky top-[-3px] z-[150] left-0 right-0   flex items-center justify-between  px-3 py-4">
@@ -16,7 +20,69 @@ function Navbar() {
       >
         Route <span className="text-green-500">.</span>
       </h1>
-      <div className="flex items-center gap-5 cursor-pointer ">
+      <div className="flex items-center gap-3 cursor-pointer ">
+        <div className=" relative">
+          <div className="dropdown dropdown-center ">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle m-1 relative"
+            >
+              <Heart />
+              <span className="absolute bg-green-400 rounded-full top-[-10px] right-[-2px] size-[23px] text-sm  text-white text-center">
+                {wishList?.length || 0}
+              </span>
+            </div>
+            <div
+              tabIndex={0}
+              className={`dropdown-content  max-h-80 overflow-y-auto  bg-base-100 rounded-box z-1  p-2 space-y-3 shadow-sm w-56   `}
+            >
+              {wishList?.length > 0 ? (
+                <>
+                  {wishList.map((item) => {
+                    return (
+                      <div
+                        key={item.id}
+                        className="w-full px-4 py-3 rounded-xl flex items-center gap-3 transition-colors bg-primary/10 text-primary justify-between hover:bg-base-content/5 cursor-auto"
+                      >
+                        <p className="text-base-content">
+                          {item?.title?.slice(0, 15)}
+                        </p>
+
+                        <p
+                          className="cursor-pointer"
+                          onClick={() => {
+                            removeWishList(item?.id);
+                          }}
+                        >
+                          <HeartCrack className="text-red-600" />
+                        </p>
+                      </div>
+                    );
+                  })}
+
+                  {wishList.length > 0 && (
+                    <div className="   text-center  rounded-md">
+                      <button
+                        onClick={() => {
+                          clearWishList();
+                        }}
+                        className=" btn w-full bg-green-400  text-white "
+                      >
+                        Clear Favorite
+                      </button>
+                    </div>
+                  )}
+                </>
+              ) : (
+                <>
+                  <p className="text-center">Oops Favorite is Empty😔</p>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+
         <div className=" relative">
           <div className="dropdown dropdown-end ">
             <div

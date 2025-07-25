@@ -10,7 +10,7 @@ export const useCartStore = create(
         const cartItem = get().cart;
         const exist = cartItem.find((item) => item.id === pr.id);
         if (!exist) {
-          set({ cart: [...get().cart, pr] }); // add product to cart
+          set({ cart: [...get().cart, pr] }); 
           console.log(get().cart);
           toast.success("add Successfully");
         } else {
@@ -18,7 +18,7 @@ export const useCartStore = create(
         }
       },
       removeCart: (id) => {
-        set({ cart: get().cart.filter((pr) => pr.id !== id) }); // remove product
+        set({ cart: get().cart.filter((pr) => pr.id !== id) }); 
         toast.success("removed Success");
       },
     }),
