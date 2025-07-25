@@ -8,6 +8,7 @@ It allows users to:
 - Filter and sort by price or name
 - Search with live highlight
 - Add products to cart
+- Add products to WishList
 
 ---
 
@@ -29,7 +30,8 @@ It allows users to:
 ## 🎯 Features
 
 - 🔍 **Live Search with Highlighting**  
-- 🛍️ **Cart Functionality** (Add, Remove, View)  
+- 🛍️ **Cart Functionality** (Add, Remove, View)
+- 🛍️ **WishList Functionality** (Add, Remove, View)  
 - 🎨 **Theme Switcher with 30+ DaisyUI Themes**  
 - ⭐ **Rating Component** for each product  
 - 🔃 **Filtering & Sorting** (Price, Name)  
@@ -42,28 +44,31 @@ It allows users to:
 ## 📸 Screenshots
 
 ### 🖥️ Home Page & Products  
-<img src="./screenshot/Screenshot 2025-07-25 095119.jpg" width="600"/>
+<img src="./screenshot/Screenshot 2025-07-25 211837.jpg" width="600"/>
 <img src="./screenshot/Screenshot 2025-07-25 095252.jpg" width="600"/>
 
 ### 🎯 Product Details & Rating  
-<img src="./screenshot/Screenshot 2025-07-25 095155.jpg" width="400"/>
+<img src="./screenshot/Screenshot 2025-07-25 211748.jpg" width="400"/>
 <img src="./screenshot/Screenshot 2025-07-25 095316.jpg" width="400"/>
-<img src="./screenshot/Screenshot 2025-07-25 095409.jpg" width="500"/>
+<img src="./screenshot/Screenshot 2025-07-25 211412.jpg" width="500"/>
+<img src="./screenshot/Screenshot 2025-07-25 211505.jpg" width="500"/>
 
 ### 🕶️ Dark Mode & Themes  
 <img src="./screenshot/Screenshot 2025-07-25 095233.jpg" width="600"/>
 
 ### 📱 Mobile View  
-<img src="./screenshot/Screenshot 2025-07-25 095343.jpg" width="300"/>
+<img src="./screenshot/Screenshot 2025-07-25 211600.jpg" width="300"/>
 
-### 🛒 Cart & Empty State  
+### 🛒 Cart & WishList & Empty State  
 <img src="./screenshot/Screenshot 2025-07-25 095607.jpg" width="500"/>
 <img src="./screenshot/Screenshot 2025-07-25 095211.jpg" width="500"/>
+<img src="./screenshot/Screenshot 2025-07-25 211448.jpg" width="500"/>
+<img src="./screenshot/Screenshot 2025-07-25 211525.jpg" width="500"/>
 
 ---
 
 ## 🎥 Demo
 
-> [🔗 Watch Demo](https://drive.google.com/file/d/1wPC4Jb8xcINylnGgcGvGMQjYR6iJu8Lf/view)
+> [🔗 Watch Demo](https://drive.google.com/file/d/1LTlOFgFx9ef7YbTH-FUgedf-P1n4OEPD/view?usp=sharing)
 
 ---
