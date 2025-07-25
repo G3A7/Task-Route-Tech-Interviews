@@ -58,7 +58,7 @@ It allows users to:
 
 ### 🛒 Cart & Empty State  
 <img src="./screenshot/Screenshot 2025-07-25 095607.jpg" width="500"/>
-
+<img src="./screenshot/Screenshot 2025-07-25 095211.jpg" width="500"/>
 
 ---
 
